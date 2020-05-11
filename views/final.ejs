@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>AQI & Weather</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/styles2.css">
+  <link href="https://fonts.googleapis.com/css?family=Jost&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <h1><%= myCity %>, <%= myState %> </h1>
+
+  <div class="card aqi-card" style="width: 20rem;">
+    <img class="card-img-top aqi-img mx-auto d-block" src="images/<%= myColor %>.png">
+    <div class="card-body">
+      <h5 class="card-title card-heading">AQI: <%= myAqi %> </h5>
+      <p class="card-text card-text"><%= myText %> </p>
+    </div>
+  </div>
+
+  <div class="card temp-card" style="width: 20rem;">
+    <img class="card-img-top temp-img mx-auto d-block" src="images/<%= myTempIcon %>.png">
+    <div class="card-body">
+      <h5 class="card-title card-heading"><%= myTemp %>°C</h5>
+      <p class="card-text card-text">Humidity: <%= humidity %>%</p>
+      <p class="card-text card-text">Wind Speed: <%= windSpeed %> m/s</p>
+    </div>
+  </div>
+</body>
+
+<form action="/reset" method="POST">
+<button type="submit" class="btn btn-outline-dark btn-lg reset-btn">Get another city's data</button>  
+</form>
+
+</html>

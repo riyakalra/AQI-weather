@@ -1,0 +1,37 @@
+body {
+    font-family: 'Jost', sans-serif;
+    text-align: center;
+    background-image: url("https://i.pinimg.com/originals/ff/f4/b6/fff4b69571e95ea0d2adba2225e9c3c6.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 150%;
+    background-color: #c3edea;
+}
+
+h1 {
+    font-size: 400%;
+    font-weight: 700;
+    color: #442727;
+    padding-top: 5%;
+    padding-bottom: 3%;
+}
+
+input[type="text"] {
+    height: 60px;
+    top: 10px;
+    border: none;
+    margin-bottom: 20px;
+    padding-left: 1%;
+    background: #f3e1e1;
+    font-size: 20px;
+    font-weight: 200;
+    width: 313px;
+}
+
+.submit-button {
+    margin-top: 27px;
+    font-size: 20px;
+    font-weight: 200;
+    padding: 0.8%;
+}
