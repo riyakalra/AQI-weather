@@ -5,5 +5,5 @@ This tells the AQI value based on US EPA standard, current temperature, wind spe
 2) cd to aqi-weather-api-master folder
 3) run these commands:
     1. npm i 
-    2. nodemon app.js
+    2. node app.js (or nodemon app.js if you have nodemon installed)
 4) open chrome, write localhost:3000 in url 
