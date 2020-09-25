@@ -11,12 +11,15 @@ body {
     background: linear-gradient(to bottom, #effcff 0%, #9ee8fa 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#effcff', endColorstr='#9ee8fa', GradientType=0);
     background-repeat: no-repeat;
+    overflow-x: hidden;
 }
 
-.aqi-card {
-    margin: 5% auto auto 15%;
-    float: left;
+.card {
+    margin-top: 5%;
     line-height: 1rem;
+    border-radius: 5%;
+    width: 20rem;
+    background: #ededed;
     background: -moz-linear-gradient(top, #ededed 0%, #ffffff 100%);
     background: -webkit-linear-gradient(top, #ededed 0%, #ffffff 100%);
     background: linear-gradient(to bottom, #ededed 0%, #ffffff 100%);
@@ -24,13 +27,31 @@ body {
     background-repeat: no-repeat;
 }
 
+.card:hover {
+    -webkit-box-shadow: -12px 7px 28px -20px rgba(0, 0, 0, 0.91);
+    -moz-box-shadow: -12px 7px 28px -20px rgba(0, 0, 0, 0.91);
+    box-shadow: -12px 7px 28px -20px rgba(0, 0, 0, 0.91);
+}
+
+@media (max-width: 991.98px) {
+    .card {
+        width: 50%;
+        margin-top: 7%;
+    }
+}
+
 .aqi-img {
-    height: 45%;
-    width: 45%;
+    width: 43%;
     margin-top: 5%;
 }
 
-.card-heading {
+@media (max-width: 991.98px) {
+    .aqi-img {
+        width: 32%;
+    }
+}
+
+.card-title {
     font-size: 2rem;
     font-weight: 700;
 }
@@ -46,18 +67,6 @@ h1 {
     font-weight: 700;
 }
 
-.temp-card {
-    float: right;
-    margin: 5% 15% auto auto;
-    line-height: 1rem;
-    background: #ededed;
-    background: -moz-linear-gradient(top, #ededed 0%, #ffffff 100%);
-    background: -webkit-linear-gradient(top, #ededed 0%, #ffffff 100%);
-    background: linear-gradient(to bottom, #ededed 0%, #ffffff 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#ffffff', GradientType=0);
-    background-repeat: no-repeat;
-}
-
 .temp-img {
     height: 39%;
     width: 35%;
@@ -65,5 +74,16 @@ h1 {
 }
 
 .reset-btn {
-    margin-top: 30%;
+    margin-top: 5%;
+    font-size: 17px;
+    padding: 0.7%;
+}
+
+@media (max-width: 991.98px) {
+    .reset-btn {
+        margin-top: 9%;
+        font-size: 18px;
+        background-color: #4c4c4c;
+        color: white;
+    }
 }

@@ -1,27 +1,56 @@
+html {
+    height: 100%;
+}
+
 body {
     font-family: 'Jost', sans-serif;
     text-align: center;
-    background-image: url("https://i.pinimg.com/originals/ff/f4/b6/fff4b69571e95ea0d2adba2225e9c3c6.jpg");
-    background-repeat:no-repeat;
+    align-content: center;
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 150%;
-    background-color: #c3edea;
+    background-color: #132743;
+    height: 100%;
+    position: relative;
+}
+
+#main-div {
+    position: absolute;
+    top: 10%;
+}
+
+/* Tablets and smaller devices */
+
+@media (max-width: 991.98px) {
+    #main-div {
+        top: 8%;
+    }
 }
 
 h1 {
     font-size: 400%;
     font-weight: 700;
-    color: #442727;
-    padding-top: 5%;
-    padding-bottom: 3%;
+    color: white;
+    margin-bottom: 3%;
 }
 
-input[type="text"] {
+@media (max-width: 991.98px) {
+    h1 {
+        font-size: 300%;
+        margin-bottom: 15%;
+    }
+}
+
+@media (max-width: 767.98px) {
+    h1 {
+        font-size: 200%;
+    }
+}
+
+.inputs {
     height: 60px;
-    top: 10px;
     border: none;
-    margin-bottom: 20px;
+    margin-bottom: 1.7%;
     padding-left: 1%;
     background: #f3e1e1;
     font-size: 20px;
@@ -29,9 +58,35 @@ input[type="text"] {
     width: 313px;
 }
 
-.submit-button {
-    margin-top: 27px;
+@media (max-width: 991.98px) {
+    .inputs {
+        height: 50px;
+        margin-bottom: 8%;
+        font-size: 17px;
+        width: 60%;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .inputs {
+        height: 40px;
+        width: 80%;
+    }
+}
+
+#submit-button {
+    margin-top: 4%;
     font-size: 20px;
     font-weight: 200;
     padding: 0.8%;
+}
+
+@media (max-width: 800px) {
+    #submit-button {
+        margin-top: 8%;
+        font-size: 18px;
+        padding: 1%;
+        background-color: white;
+        color: black;
+    }
 }

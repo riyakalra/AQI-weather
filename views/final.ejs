@@ -15,26 +15,34 @@
 <body>
   <h1><%= myCity %>, <%= myState %> </h1>
 
-  <div class="card aqi-card" style="width: 20rem;">
-    <img class="card-img-top aqi-img mx-auto d-block" src="images/<%= myColor %>.png">
-    <div class="card-body">
-      <h5 class="card-title card-heading">AQI: <%= myAqi %> </h5>
-      <p class="card-text card-text"><%= myText %> </p>
+  <div class="row">
+    <div class="col-lg-6 d-flex justify-content-center">
+      <div class="card aqi-card">
+        <img class="card-img-top aqi-img mx-auto d-block" src="images/<%= myColor %>.png">
+        <div class="card-body">
+          <h5 class="card-title">AQI: <%= myAqi %> </h5>
+          <p class="card-text"><%= myText %> </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6 d-flex justify-content-center">
+      <div class="card temp-card">
+        <img class="card-img-top temp-img mx-auto d-block" src="images/<%= myTempIcon %>.png">
+        <div class="card-body">
+          <h5 class="card-title"><%= myTemp %>°C</h5>
+          <p class="card-text">Humidity: <%= humidity %>%</p>
+          <p class="card-text">Wind Speed: <%= windSpeed %> m/s</p>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="card temp-card" style="width: 20rem;">
-    <img class="card-img-top temp-img mx-auto d-block" src="images/<%= myTempIcon %>.png">
-    <div class="card-body">
-      <h5 class="card-title card-heading"><%= myTemp %>°C</h5>
-      <p class="card-text card-text">Humidity: <%= humidity %>%</p>
-      <p class="card-text card-text">Wind Speed: <%= windSpeed %> m/s</p>
-    </div>
-  </div>
 </body>
 
+
 <form action="/reset" method="POST">
-<button type="submit" class="btn btn-outline-dark btn-lg reset-btn">Get another city's data</button>  
+  <button type="submit" class="btn btn-outline-dark btn-lg reset-btn">Get another city's data</button>
 </form>
 
 </html>

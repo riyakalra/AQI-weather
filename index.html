@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title>AQI & Weather</title>
 
@@ -12,15 +13,36 @@
     <link href="https://fonts.googleapis.com/css?family=Jost&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    <form action="/final" method="POST">
-        <h1>AQI & Weather</h1>
-        <input type="text" name="city" placeholder="City"><br>
-        <input type="text" name="state" placeholder="State"><br>
-        <input type="text" name="country" placeholder="Country"><br>
+<body onload="wall()">
+    <div class="container-fluid" id="main-div">
 
-        <button type="submit" class="submit-button btn btn-outline-info" name="button">Get AQI and Weather</button>
-    </form>
+        <form action="/final" method="POST">
+            <h1 id="heading">AQI & Weather</h1>
+            <input class="inputs" type="text" name="city" placeholder="City"><br>
+            <input class="inputs" type="text" name="state" placeholder="State"><br>
+            <input class="inputs" type="text" name="country" placeholder="Country"><br>
+
+            <button type="submit" id="submit-button" class="btn btn-outline-light" name="button">Get Details</button>
+        </form>
+        <script>
+            function wall() {
+                let date = new Date();
+                let hr = date.getHours();
+
+
+                if (hr >= 5 && hr < 20) {
+                    document.body.style.backgroundImage = "url('https://4kwallpapers.com/images/wallpapers/mountains-foggy-mist-sunrise-turquoise-yellow-sky-gradient-5120x2880-1322.jpg')";
+                }
+
+                else {
+                    document.body.style.backgroundImage = "url('https://celcliptipsprod.s3-ap-northeast-1.amazonaws.com/tips_article_body/0ec5/450560/a24ab35d422fc1148f11f6251cea6e05')";
+                }
+
+
+            }
+        </script>
+
+    </div>
 
 </body>
 
