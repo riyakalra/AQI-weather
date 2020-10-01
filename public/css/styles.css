@@ -1,92 +1,81 @@
 html {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    font-family: 'Jost', sans-serif;
-    text-align: center;
-    align-content: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-color: #132743;
-    height: 100%;
-    position: relative;
+  font-family: 'Jost', sans-serif;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  position: relative;
 }
 
 #main-div {
-    position: absolute;
-    top: 10%;
-}
-
-/* Tablets and smaller devices */
-
-@media (max-width: 991.98px) {
-    #main-div {
-        top: 8%;
-    }
+  position: absolute;
+  top: 10%;
 }
 
 h1 {
-    font-size: 400%;
-    font-weight: 700;
-    color: white;
-    margin-bottom: 3%;
-}
-
-@media (max-width: 991.98px) {
-    h1 {
-        font-size: 300%;
-        margin-bottom: 15%;
-    }
-}
-
-@media (max-width: 767.98px) {
-    h1 {
-        font-size: 200%;
-    }
+  font-size: 400%;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 3%;
 }
 
 .inputs {
-    height: 60px;
-    border: none;
-    margin-bottom: 1.7%;
-    padding-left: 1%;
-    background: #f3e1e1;
-    font-size: 20px;
-    font-weight: 200;
-    width: 313px;
+  height: 60px;
+  border: none;
+  margin-bottom: 1.7%;
+  padding-left: 1%;
+  background: white;
+  font-size: 20px;
+  font-weight: 200;
+  width: 313px;
 }
 
 @media (max-width: 991.98px) {
-    .inputs {
-        height: 50px;
-        margin-bottom: 8%;
-        font-size: 17px;
-        width: 60%;
-    }
+  .inputs {
+    height: 50px;
+    margin-bottom: 8%;
+    font-size: 17px;
+    width: 60%;
+  }
+
+  h1 {
+    font-size: 300%;
+    margin-bottom: 15%;
+  }
+
+  #main-div {
+    top: 8%;
+  }
 }
 
 @media (max-width: 767.98px) {
-    .inputs {
-        height: 40px;
-        width: 80%;
-    }
+  .inputs {
+    height: 40px;
+    width: 80%;
+  }
+
+  h1 {
+    font-size: 200%;
+  }
 }
 
 #submit-button {
-    margin-top: 4%;
-    font-size: 20px;
-    font-weight: 200;
-    padding: 0.8%;
+  font-size: 20px;
+  font-weight: 200;
+  width: 150px;
+  margin-top: 1%;
+  border-radius: 25px;
 }
 
 @media (max-width: 800px) {
-    #submit-button {
-        margin-top: 8%;
-        font-size: 18px;
-        padding: 1%;
-        background-color: white;
-        color: black;
-    }
+  #submit-button {
+    margin-top: 5%;
+    font-size: 18px;
+    padding: 1%;
+  }
 }
