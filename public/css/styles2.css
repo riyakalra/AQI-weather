@@ -25,9 +25,8 @@ body {
     background: linear-gradient(to bottom, #ededed 0%, #ffffff 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#ffffff', GradientType=0);
     background-repeat: no-repeat;
-}
 
-.card:hover {
+    /* box shadow */
     -webkit-box-shadow: -12px 7px 28px -20px rgba(0, 0, 0, 0.91);
     -moz-box-shadow: -12px 7px 28px -20px rgba(0, 0, 0, 0.91);
     box-shadow: -12px 7px 28px -20px rgba(0, 0, 0, 0.91);
