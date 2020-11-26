@@ -10,7 +10,8 @@
 
   <link rel="stylesheet" href="css/styles2.css">
   <link href="https://fonts.googleapis.com/css?family=Jost&display=swap" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -47,28 +48,33 @@
   </form>
 
   <script>
-    $(function() {
-    var d = new Date();
-    var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    var date = d.getDate();
-    var month = d.getMonth();
-    var today = d.getDay();
-    var hours = d.getHours();
-    var minutes = d.getMinutes();
-    var timePeriod;
+    $(function () {
+      var d = new Date();
+      var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+      var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+      var date = d.getDate();
+      var month = d.getMonth();
+      var today = d.getDay();
+      var hours = d.getHours();
+      var minutes = d.getMinutes();
+      var timePeriod;
 
-    if(hours>12){
-      timePeriod = "pm"
-    }else{
-      timePeriod = "am"
-    }
+      if (hours > 12) {
+        timePeriod = "pm"
+      } else {
+        timePeriod = "am"
+      }
 
-    $('.date-details').append('<h2 class="date">' + days[today] + ", " +  date + " " + months[month] + '</h2>')
-    $('.date-details').append('<h3 class="time">' + hours + ":" + minutes + timePeriod + "</h3>")
-   
+      $('.date-details').append('<h2 class="date">' + days[today] + ", " + date + " " + months[month] + '</h2>')
+
+      if (minutes < 10)
+        $('.date-details').append('<h3 class="time">' + hours + ":" + "0" + minutes + " " + timePeriod + "</h3>");
+      else
+        $('.date-details').append('<h3 class="time">' + hours + ":" + minutes + " " + timePeriod + "</h3>");
+
     });
 
   </script>
 </body>
+
 </html>
