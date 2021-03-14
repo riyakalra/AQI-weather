@@ -7,3 +7,5 @@ This tells the AQI value based on US EPA standard, current temperature, wind spe
     1. npm i 
     2. node app.js (or nodemon app.js if you have nodemon installed)
 4) open chrome, write localhost:3000 in url 
+
+Link to website:  https://aqi-weather.herokuapp.com/
