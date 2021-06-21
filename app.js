@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const request = require("request");
@@ -17,7 +18,6 @@ app.post("/final", function (req, res) {
     var cityEntered = req.body.city;
     var stateEntered = req.body.state;
     var countryEntered = req.body.country;
-    var myKey = "5387eaf1-4120-4182-a458-0f1d7c7ed654";
 
     var options = {
         url: "https://api.airvisual.com/v2/city",
@@ -26,7 +26,7 @@ app.post("/final", function (req, res) {
             city: cityEntered,
             state: stateEntered,
             country: countryEntered,
-            key: myKey
+            key: process.env.API_KEY
         }
     };
 
@@ -67,10 +67,3 @@ app.post("/reset", function (req, res) {
 app.listen(process.env.PORT || 3000, function (req, res) {
     console.log("Server running on port 3000");
 })
-
-
-//api key for iqair
-//5387eaf1-4120-4182-a458-0f1d7c7ed654
-
-// curl --location --request GET 'api.airvisual.com/v2/city?city=delhi&state=delhi&country=india&key={5387eaf1-4120-4182-a458-0f1d7c7ed654}'
-// http://api.airvisual.com/v2/city?city=delhi&state=delhi&country=india&key=5387eaf1-4120-4182-a458-0f1d7c7ed654
