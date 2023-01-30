@@ -32,7 +32,7 @@ app.post("/final", function (req, res) {
 
     request(options, function (error, response, body) {
         var content = JSON.parse(body);
-
+        console.log(content)
         if (content.status == "success") {
             var cityReturned = content.data.city;
             var stateReturned = content.data.state;

@@ -18,4 +18,4 @@ Follow these steps to generate your API key, required to run the project:
 * In order to run the project on your browser, run <br> ```node app.js```
 * Open a web browser and write http://localhost:3000 in url 
 
-Link to website:  https://aqi-weather.herokuapp.com/
+Link to website:  https://aqi-weather.onrender.com/
